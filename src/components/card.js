@@ -2,6 +2,7 @@
 export { createCard, deleteCard, likeCard };
 
 const cardTemplate = document.querySelector('#card-template').content;
+
 //Функция создания карточки
 function createCard(name, link, deleteCard, likeCard, openModalImg) {
   const cardItem = cardTemplate.querySelector('.card').cloneNode(true);

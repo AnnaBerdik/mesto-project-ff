@@ -9,11 +9,9 @@ const popups = document.querySelectorAll('.popup');
 const popupTypeEdit = document.querySelector('.popup_type_edit');
 const popupNewCard = document.querySelector('.popup_type_new-card');
 const popupTypeImage = document.querySelector('.popup_type_image');
-const buttonCloseList = document.querySelector('.popup__close');
+const buttonCloseList = document.querySelectorAll('.popup__close');
 const profileEditButton = document.querySelector('.profile__edit-button');
 const profileAddButton = document.querySelector('.profile__add-button');
-const popupNewCardButton = document.querySelector('.popup_type_new-card .popup__close');
-const popupModalImage = document.querySelector('.popup_type_image .popup__close');
 const formProfile = document.querySelector('.popup_type_edit .popup__form');
 const formAddCard = document.querySelector('.popup_type_new-card .popup__form');
 const modalImage = document.querySelector('.popup__image');
@@ -69,21 +67,12 @@ formAddCard.addEventListener('submit', function (evt) {
 
 profileEditButton.addEventListener('click', openProfilePopup);
 formProfile.addEventListener('submit', handleProfileFormSubmit);
-buttonCloseList.addEventListener('click', () => closeModal(popupTypeEdit));
-popupNewCardButton.addEventListener('click', () => closeModal(popupNewCard));
-popupModalImage.addEventListener('click', () => closeModal(popupTypeImage));
 profileEditButton.addEventListener('click', () => openModal(popupTypeEdit));
 profileAddButton.addEventListener('click', () => openModal(popupNewCard));
 
-popups.forEach((popup) => {
-  popup.addEventListener('mousedown', (evt) => closeOverlay(evt, popup));
-  popup.classList.add('popup_is-animated');
-});
-
- /*
 buttonCloseList.forEach(btn => {
   const popup = btn.closest('.popup');
   btn.addEventListener('click', () => closeModal(popup)); 
   popup.addEventListener('mousedown', closeOverlay);
   popup.classList.add('popup_is-animated');
-}) */
+});
