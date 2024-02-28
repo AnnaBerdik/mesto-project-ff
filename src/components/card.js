@@ -23,7 +23,8 @@ function createCard(name, link, deleteCard, likeCard, openModalImg) {
     likeButton.addEventListener('click', likeCard);
   };
 
-  cardImage.addEventListener('click', (evt) => openModalImg(evt));
+  cardImage.addEventListener('click', () => {
+    openModalImg(link, name)});
   
   return cardItem;
 };

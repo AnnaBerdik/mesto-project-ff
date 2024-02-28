@@ -29,10 +29,10 @@ initialCards.forEach(function (element) {
 });
 
 //Функция открытия модального окна с картинкой
-function openModalImg(evt) {
-  modalImage.src = evt.target.src;
-  modalTitle.textContent = evt.target.alt;
-  modalImage.alt = modalTitle.textContent;
+function openModalImg(imageUrl, imageName) {
+  modalImage.src = imageUrl;
+  modalImage.alt = imageName;
+  modalTitle.textContent = imageName;
   openModal(popupTypeImage);
 };
 
@@ -42,6 +42,7 @@ function openProfilePopup() {
   const currentJob = profileDescription.textContent;
   nameInput.value = currentName;
   jobInput.value = currentJob;
+  openModal(popupTypeEdit);
 };
 
 //Функция для обновления данных на странице
@@ -67,7 +68,6 @@ formAddCard.addEventListener('submit', function (evt) {
 
 profileEditButton.addEventListener('click', openProfilePopup);
 formProfile.addEventListener('submit', handleProfileFormSubmit);
-profileEditButton.addEventListener('click', () => openModal(popupTypeEdit));
 profileAddButton.addEventListener('click', () => openModal(popupNewCard));
 
 buttonCloseList.forEach(btn => {
