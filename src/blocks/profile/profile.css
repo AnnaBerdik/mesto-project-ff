@@ -20,3 +20,22 @@
     text-align: center;
   }
 }
+.profile__edit-avatar {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 0;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../../images/kotik.jpg);
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.profile__edit-avatar:hover {
+  opacity: 1;
+  background-image: url(../../images/Vector.png);
+}
