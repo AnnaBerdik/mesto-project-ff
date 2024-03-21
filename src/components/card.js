@@ -1,5 +1,4 @@
 import { deleteCards, deleteLikeCards,  likeCards } from '../components/api.js';
-export { createCard, changeLike, handleDeleteCard};
 
 const cardTemplate = document.querySelector('#card-template').content;
 
@@ -82,3 +81,5 @@ function handleDeleteCard(cardId, cardElement) {
     console.log(`Ошибка: ${error}`);
   });
 };
+
+export { createCard, changeLike, handleDeleteCard};

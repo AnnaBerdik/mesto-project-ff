@@ -1,7 +1,3 @@
-export {getUserInfo, getCardsInfo,
-        editingUserData, addNewCardData,
-        likeCards, deleteLikeCards,
-        deleteCards, upgradeAvatar};
 
 const baseUrl = 'https://nomoreparties.co/v1/wff-cohort-9'
 
@@ -88,3 +84,8 @@ function upgradeAvatar(pictureData) {
   })
   .then(handleResponse);
 };
+
+export {getUserInfo, getCardsInfo,
+  editingUserData, addNewCardData,
+  likeCards, deleteLikeCards,
+  deleteCards, upgradeAvatar};

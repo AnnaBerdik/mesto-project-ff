@@ -28,7 +28,6 @@
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../../images/kotik.jpg);
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -36,6 +35,6 @@
 }
 
 .profile__edit-avatar:hover {
-  opacity: 1;
+  opacity: 0.8;
   background-image: url(../../images/Vector.png);
 }

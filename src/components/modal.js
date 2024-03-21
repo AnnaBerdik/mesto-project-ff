@@ -1,6 +1,4 @@
 
-  export {openModal, closeModal, closeOverlay};
-
 //Функция открытия модального окна
 function openModal(popup) {
   popup.classList.add('popup_is-opened');
@@ -26,3 +24,5 @@ if (evt.key === 'Escape') {
   closeModal(document.querySelector('.popup_is-opened'));
 }
 };
+
+export {openModal, closeModal, closeOverlay};

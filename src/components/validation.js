@@ -1,5 +1,4 @@
 
-export {clearValidation, enableValidation,  validationConfig };
 
 const validationConfig = {
   formSelector: '.popup__form',
@@ -94,4 +93,6 @@ const validationConfig = {
       setEventListeners(formElement, validationConfig.inputSelector, validationConfig.inputErrorClass, validationConfig.errorClass, validationConfig.submitButtonSelector, validationConfig.inactiveButtonClass);
     });
   };
+
+  export {clearValidation, enableValidation,  validationConfig };
   
